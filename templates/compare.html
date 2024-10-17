@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Compare Models - LLM Benchmark{% endblock %}
+
+{% block content %}
+<h2>Model Comparison</h2>
+<div id="comparisonContainer" class="row">
+    <!-- Comparison data will be populated by JavaScript -->
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', path='/compare.js') }}"></script>
+{% endblock %}

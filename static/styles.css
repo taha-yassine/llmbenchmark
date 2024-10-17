@@ -1,0 +1,29 @@
+/* Add any custom styles here */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#llmTable th {
+    cursor: pointer;
+}
+
+.compare-checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.provider-badge {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.provider-badge:hover {
+    opacity: 0.8;
+}
+
+.provider-badge img {
+    max-height: 20px;
+    width: auto;
+    margin-right: 5px;
+}

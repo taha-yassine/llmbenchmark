@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3">
+        <h3>Filters</h3>
+        <form id="filterForm">
+            <div class="mb-3">
+                <label class="form-label">Provider</label>
+                <div id="providerBadges" class="mb-2">
+                    <!-- Provider badges will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="parameterRange" class="form-label">Parameters</label>
+                <div id="parameterSlider"></div>
+                <div class="d-flex justify-content-between">
+                    <span id="minParamValue"></span>
+                    <span id="maxParamValue"></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="contextRange" class="form-label">Context Size</label>
+                <div id="contextSlider"></div>
+                <div class="d-flex justify-content-between">
+                    <span id="minContextValue"></span>
+                    <span id="maxContextValue"></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">License</label>
+                <select class="form-select" id="licenseFilter" name="license">
+                    <option value="">All</option>
+                    <!-- License options will be populated by JavaScript -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </form>
+    </div>
+    <div class="col-md-9">
+        <table class="table table-striped" id="llmTable">
+            <thead>
+                <tr>
+                    <th>Model Name</th>
+                    <th>Provider</th>
+                    <th>Release Date</th>
+                    <th>Parameter Count</th>
+                    <th>Context Size</th>
+                    <th>License</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+<script src="{{ url_for('static', path='/script.js') }}"></script>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+{% endblock %}

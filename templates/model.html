@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Model Details - LLM Benchmark{% endblock %}
+
+{% block content %}
+<div id="modelDetails">
+    <!-- Model details will be populated by JavaScript -->
+</div>
+<h3 class="mt-4">Performance Metrics</h3>
+<table class="table table-striped" id="performanceTable">
+    <thead>
+        <tr>
+            <th>Benchmark</th>
+            <th>Score</th>
+            <th>Dataset Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Performance metrics will be populated by JavaScript -->
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script src="model.js"></script>
+{% endblock %}
